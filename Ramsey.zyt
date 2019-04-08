@@ -1,0 +1,14 @@
+Ramsey
+1
+f 0 100 50 0 10000
+2
+t1 0 40 20 0 10000
+t2 0 60 30 0 10000
+3
+amp_ramsey 0 1 1 0 1
+amp_detect 0 1 1 0 1
+amp_pumping 0 1 1 0 1
+1
+phvar 0 2 0 0 4
+1
+None 0 0 0 0 0

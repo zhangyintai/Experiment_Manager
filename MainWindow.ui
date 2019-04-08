@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1252</width>
+    <height>877</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="TEST_Button">
+    <property name="geometry">
+     <rect>
+      <x>1140</x>
+      <y>790</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TEST</string>
+    </property>
+   </widget>
+   <widget class="QTreeWidget" name="ExperimentTree">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>311</width>
+      <height>681</height>
+     </rect>
+    </property>
+    <column>
+     <property name="text">
+      <string>All_Experiment</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QLineEdit" name="Type_LineEdit">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>760</y>
+      <width>171</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Type_Label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>760</y>
+      <width>47</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Type</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Name_Label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>800</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Name</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Name_LineEdit">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>800</y>
+      <width>171</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="NewExperiment_Button">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>780</y>
+      <width>101</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>New Experiment</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="CheckConfig_Button">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>700</y>
+      <width>141</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Check Configuration</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="DeleteExperiment_Button">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>700</y>
+      <width>141</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Delete Experiment</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="DDSMonitor_Button">
+    <property name="geometry">
+     <rect>
+      <x>1120</x>
+      <y>20</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>DDS Monitor</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="DeviceConfigurationFile_label">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>20</y>
+      <width>151</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Device Configuration File</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="DeviceConfig_LineEdit">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>20</y>
+      <width>401</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="DeviceConfigBrowse_Button">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>20</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Browse</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="DeviceConfigSet_Button">
+    <property name="geometry">
+     <rect>
+      <x>1030</x>
+      <y>20</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Set</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1252</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuSubExperiment">
+    <property name="title">
+     <string>SubExperiment</string>
+    </property>
+    <addaction name="AddSubExperiment"/>
+   </widget>
+   <addaction name="menuSubExperiment"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="AddSubExperiment">
+   <property name="text">
+    <string>New SubExperiment</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

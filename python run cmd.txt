@@ -1,0 +1,3 @@
+cmd /k   cd /d "$(CURRENT_DIRECTORY)" & ECHO "$(CURRENT_DIRECTORY)"&  python "$(FULL_CURRENT_PATH)" & PAUSE & EXIT
+
+cmd /k python "$(FULL_CURRENT_PATH)" & PAUSE & EXIT
