@@ -43,3 +43,27 @@ After the DDS is initialized, use the command<br>`fpga.cw_play(channel, amplitud
 Notice:
 1. To stop the continuous waveform, set amplitude, frequency and phase all to 0 and clear the phase using the command<br>`fpga.phase_clear_dds([channel])`
 2. If the channel is used to perform a series of pulses, the channel must be stopped from the continuous mode and clear the phase.
+Example
+```
+# An example for a continuous waveform generation
+import device
+import time
+
+channel = 0 # Use 0th channel
+amplitude = 1 # The amplitude is set as 1
+frequency = 1 # The frequency is 1 MHz
+phase = 1 # The initial phase is pi
+
+fpga - device.FPGA(1, False)
+fpga.cw_play(channel, amplitude, frequency, phase) # Start the continuous waveform
+
+time.sleep(1) # The waveform is a second long approximately.
+
+fpga.cw_play(channel, 0, 0, 0) # Stop the continuous waveform
+fpga.phase_clear_dds([channel]) # Clear the phase
+```
+   
+## Build a series of pulses
+To build a series of pulses, we will use some commands for multi-controlling
+```
+```
