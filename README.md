@@ -1,5 +1,5 @@
 <h1>Experiment Manager</h1>
-<h3>This Experiment_Manager is used for IonTrap Team of Prof. Yiheng Lin only!</h3><br>
+<h3>This Experiment Manager is used for IonTrap Team of Prof. Yiheng Lin only!</h3><br>
 
 # Some basic features:
   - Using the grammer of python directly.
@@ -26,9 +26,20 @@
   2. Run the script
 3. Run the "subexperiment.py" and import the configuration file which was generated previously. Adjust the parameters and save the adjusted parameters to the directory that the script for the program will be contained in.
 4. Write the script file of the experiment.
-   1. import "Functions.py"
-   2. import the script that contains parameters, which is often named "NameOfTheExperiment_para.py"
+   1. import "Functions.py". It's more convenient to use `from Functions import *` to import all the functions in the script.
+   2. import the script that contains parameters, which is often named "NameOfTheExperiment_para.py". Use `from NameOfTheExperiment_para import *` for the same reason.
    3. import "device.py"
    4. Check the output by oscilloscope. 
 5. Import the script file to the window of the subexperiment that was just configured.
 6. Run the script.
+
+## Initial the DDS
+1. Import the device script: <br>`import device`
+2. Set the fpga: <br>`fpga = device.FPGA(1, False)`<br> Here we only have one FPGA currently.
+3. Initial the DDS: <br>`fpga.initial_dds()`
+
+## Output a continuous waveform
+After the DDS is initialized, use the command<br>`fpga.cw_play(channel, amplitude, frequency, phase)`<br>
+Notice:
+1. To stop the continuous waveform, set amplitude, frequency and phase all to 0 and clear the phase using the command<br>`fpga.phase_clear_dds([channel])`
+2. If the channel is used to perform a series of pulses, the channel must be stopped from the continuous mode and clear the phase.
