@@ -54,7 +54,7 @@ amplitude = 1 # The amplitude is set as 1
 frequency = 1 # The frequency is 1 MHz
 phase = 1 # The initial phase is pi
 
-fpga - device.FPGA(1, False)
+fpga = device.FPGA(1, False)
 fpga.cw_play(channel, amplitude, frequency, phase) # Start the continuous waveform
 
 time.sleep(1) # The waveform is a second long approximately.
