@@ -23,7 +23,7 @@ class FVar(object):
         self.var = var
     
     def set_var(self, var):
-        if var > self.uub and var < self.llb:
+        if var < self.uub and var > self.llb:
             self.var = var
             if self.var > self.ub:
                 self.ub = (self.uub + self.var) / 2
@@ -77,7 +77,7 @@ class TVar(object):
         self.var = var
     
     def set_var(self, var):
-        if var > self.uub and var < self.llb:
+        if var < self.uub and var > self.llb:
             self.var = var
             if self.var > self.ub:
                 self.ub = (self.uub + self.var) / 2
@@ -130,7 +130,7 @@ class AmpVar(object):
         self.var = var
     
     def set_var(self, var):
-        if var > self.uub and var < self.llb:
+        if var < self.uub and var > self.llb:
             self.var = var
             if self.var > self.ub:
                 self.ub = (self.uub + self.var) / 2
@@ -184,7 +184,7 @@ class PhVar(object):
         self.var = var
     
     def set_var(self, var):
-        if var > self.uub and var < self.llb:
+        if var < self.uub and var > self.llb:
             self.var = var
             if self.var > self.ub:
                 self.ub = (self.uub + self.var) / 2
@@ -237,7 +237,7 @@ class OVar(object):
         self.var = var
     
     def set_var(self, var):
-        if var > self.uub and var < self.llb:
+        if var < self.uub and var > self.llb:
             self.var = var
             if self.var > self.ub:
                 self.ub = (self.uub + self.var) / 2

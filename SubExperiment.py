@@ -716,6 +716,7 @@ class SubExperiment(QtWidgets.QWidget, Ui_SubExperiment_Dialog):
         try:
             index = self.FVar_ComboBox.currentIndex()
             self.FVar_list[index].set_var(self.FVar_var_SpinBox.value())
+            
         except:
             print("FVAR VAR CHANGE Warning!")
     
@@ -785,6 +786,7 @@ class SubExperiment(QtWidgets.QWidget, Ui_SubExperiment_Dialog):
         try:
             index = self.TVar_ComboBox.currentIndex()
             self.TVar_list[index].set_var(self.TVar_var_SpinBox.value())
+            print(self.TVar_var_SpinBox.value(), self.TVar_list[index].var)
         except:
             print("TVar var change Warning!")
 
