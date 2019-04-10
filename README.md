@@ -133,7 +133,7 @@ There's a built-in Ramsey in the "Functions.py". The parameters are listed clear
 They are still under testing and developing. Coming soon.
 
 ## The control of the DAC
-The control of the DAC is much easier than the control of DDS. The DAC is controlled by the FPGA on the DDS board. Here we use a DAC manufactured by Analog Device. Its model is EVAL-AD5371EBZ. The command for the DAC to operate the DAC is `fpga.ad5371_play(channel_list, data_list)`. The format of the `data_list` is a list of lists, namely`[[ch1_1, ch2_1, ..., ], [ch1_2, ch2_2, ..., ...]]`. The inner list contains the voltages for different channels.
+The control of the DAC is much easier than the control of DDS. The DAC is controlled by the FPGA on the DDS board. Here we use a DAC manufactured by Analog Device. Its model is EVAL-AD5371EBZ. The command for the DAC to operate the DAC is `fpga.ad5371_play(channel_list, data_list)`. The format of the `data_list` is a list of lists, namely`[[ch1_1, ch2_1, ..., ], [ch1_2, ch2_2, ..., ...], ..., ...]`. The inner list contains the voltages for different channels.
 
 Example:
 ```
