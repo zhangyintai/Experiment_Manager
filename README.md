@@ -12,8 +12,15 @@
   - Python 3.6.x
   - The driver for the DDS
   - numpy, scipy, matplotlib module (for interface development, pyqt5 module is required)
+  - Install the driver of required boards.
 
 # Usage:
+## Install the driver of the DDS
+1. Download the drivers from the "Drivers" folder of this repository.
+2. Turn of the DDS and connect the DDS with the computer
+3. Start the Device Manager
+4. Right click at the device, install the driver manually.
+   
 ## Configure the experiment by GUI
 ### Configure the subwindow of the experiment
 1. Install the driver of the DDS
