@@ -17,28 +17,27 @@
 # Usage:
 ## Install the driver of the DDS
 1. Download the drivers from the "Drivers" folder of this repository.
-2. Turn of the DDS and connect the DDS with the computer
-3. Start the Device Manager
-4. Right click at the device, install the driver manually.
+2. Switch on the the DDS with waveform generator and the power source well-set.
+3. Turn of the DDS and connect the DDS with the computer
+4. Start the Device Manager
+5. Right click at the device, install the driver manually.
    
 ## Configure the experiment by GUI
 ### Configure the subwindow of the experiment
-1. Install the driver of the DDS
-   1. Switch on the the DDS with waveform generator and the power source well-set.
-2. Generate the configuration file for a subexperiment
+1. Generate the configuration file for a subexperiment
   1. Build the variable list by "SubExperimentConfigureFileGenerator_Template.py". <br>Set the name of the experiment and the filename with suffix ".zyt". Notice that
      1. The variables should be classified by types (FVar, TVar, AmpVar, PhVar, OVar).
      2. Variable should not be named as "None".
      3. The define of the variable should follow such format("type_of_the_variable"_list.append(name_of_the_var,lb, ub, var, llb, uub))
   2. Run the script
-3. Run the "subexperiment.py" and import the configuration file which was generated previously. Adjust the parameters and save the adjusted parameters to the directory that the script for the program will be contained in.
-4. Write the script file of the experiment.
+2. Run the "subexperiment.py" and import the configuration file which was generated previously. Adjust the parameters and save the adjusted parameters to the directory that the script for the program will be contained in.
+3. Write the script file of the experiment.
    1. import "Functions.py". It's more convenient to use `from Functions import *` to import all the functions in the script.
    2. import the script that contains parameters, which is often named "NameOfTheExperiment_para.py". Use `from NameOfTheExperiment_para import *` for the same reason.
    3. import "device.py"
    4. Check the output by oscilloscope. 
-5. Import the script file to the window of the subexperiment that was just configured.
-6. Run the script.
+4. Import the script file to the window of the subexperiment that was just configured.
+5. Run the script.
 
 ## Initial the DDS
 1. Import the device script: <br>`import device`
