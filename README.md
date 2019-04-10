@@ -45,6 +45,13 @@
 2. Set the fpga: <br>`fpga = device.FPGA(1, False)`<br> Here we only have one FPGA currently.
 3. Initial the DDS: <br>`fpga.initial_dds()`
 
+## The units
+  - Frequency: The unit of frequencies are MHz (not the circular frequency).
+  - Time: The unit of times are microsecond.
+  - Phase: The unit of phases are $\pi$.
+  - Amplitude: The unit of the amplitudes are normalized to the maximum possible output of the given frequency. (The value of the amplitude takes from 0 to 1.)
+  - Other variables: The units of other variables are defined by users according to their settings.
+
 ## Output a continuous waveform
 After the DDS is initialized, use the command<br>`fpga.cw_play(channel, amplitude, frequency, phase)`<br>
 Notice:
