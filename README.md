@@ -132,7 +132,33 @@ There's a built-in Ramsey in the "Functions.py". The parameters are listed clear
 ## Other functions
 They are still under testing and developing. Coming soon.
 
-## Short cuts:
+## The control of the DAC
+The control of the DAC is much easier than the control of DDS. The DAC is controlled by the FPGA on the DDS board. Here we use a DAC manufactured by Analog Device. Its model is EVAL-AD5371EBZ. The command for the DAC to operate the DAC is `fpga.ad5371_play(channel_list, data_list)`. The format of the `data_list` is a list of lists, namely`[[ch1_1, ch2_1, ..., ], [ch1_2, ch2_2, ..., ...]]`. The inner list contains the voltages for different channels.
+
+Example:
+```
+import device
+import numpy as np
+import time
+
+#Initialize FPGA
+fpga = device.FPGA(1, False)
+fpga.initial_dds()
+
+data_list = []
+ch_list = [0, 39] # We use channel 0 and channel 39
+
+# Create a set of points
+for i in range (0, 500):
+  data_list.append([])
+  data_list[i].append(-4)
+  data_list[i].append(-2 * i / 1000)
+
+fpga.ad5371_play(ch_list, data_list) 
+```
+Notice that the refresh time of AD5371 is set by $T_{r}=(N_{ch}\times 107+59+113)\times 8$ ns. The range of the ouput is $-10$ V to $10$ V.
+
+## Shortcuts:
 Press F1 in the GUI guides you to http://www.bilibili.com/.<br>
 Press F2 in the GUI guides you to https://arxiv.org/.
 
