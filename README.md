@@ -70,6 +70,7 @@ fpga.phase_clear_dds([channel]) # Clear the phase
 ```
    
 ## Build a series of pulses
-To build a series of pulses, we will use some commands for multi-controlling
-```
-```
+To build a series of pulses, we will use some commands for multi-controlling:
+  - `fpga.sequence_data_download(channel_list, data_list)`
+  - `fpga.play(play_list)`
+  - `fpga.phase_clear_dds(channel_list)`
