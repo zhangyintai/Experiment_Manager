@@ -159,7 +159,7 @@ fpga.ad5371_play(ch_list, data_list)
 Notice that the refresh time of AD5371 is set by $T_{r}=(N_{ch}\times 107+59+113)\times 8$ ns. The range of the ouput is $-10$ V to $10$ V.
 
 ## Shortcuts:
-Press F1 in the GUI guides you to http://www.bilibili.com/.<br>
+Press F1 in the GUI guides you to https://www.bilibili.com/.<br>
 Press F2 in the GUI guides you to https://arxiv.org/.
 
 ## Comments and suggestions
